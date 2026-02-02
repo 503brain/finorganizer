@@ -12,7 +12,7 @@ Download MySQL [here](https://dev.mysql.com/downloads/).
 
 If you're using Visual Studio Code to access this project, use the command `php -S localhost:xxx` (xxx is the port) on the specific folder and type `localhost` on your browser search bar.
 
-## Tecnhologies used 
+## Technologies used 
 
 PHP, MySQL, HTML, CSS and JavaScript.
 

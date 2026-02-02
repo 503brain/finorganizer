@@ -29,7 +29,7 @@ PHP, MySQL, HTML, CSS and JavaScript.
 * Delete incomes entries
 * Delete expenses entries
 
-These information are available also in PT-BR on the `escopo.txt` file.
+These information are available also in PT-BR on the `escopo_bd.txt` file.
 
 ## Main screen photo
 

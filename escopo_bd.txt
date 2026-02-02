@@ -1,0 +1,12 @@
+O banco de dados deve conter as seguintes funcionalidades:
+
+-- Módulos: saldo, receita e despesa
+-- Lançamento de receitas (valor e descrição)
+-- Lançamento de despesas (valor e descrição)
+-- Listagem de receitas (valor e descrição)
+-- Listagem de despesas (valor e descrição)
+-- Visualização de saldo final
+-- Editar lançamento de receitas
+-- Editar lançamento de despesas
+-- Excluir lançamento de receitas
+-- Excluir lançamento de despesas

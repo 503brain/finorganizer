@@ -1,0 +1,297 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0;
+    background-color: transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: transparent;
+}
+
+.login-header h1 {
+    color: #333;
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+
+.login-header p {
+    color: #666;
+    font-size: 14px;
+    background-color: transparent;
+}
+
+.login-form {
+    background-color: transparent;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 500;
+    background-color: transparent;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    background-color: white;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+h2 {
+    position: relative;
+    left: 150px;
+    top: 25px;
+    padding: 20px;
+}
+
+.conta {
+    position: absolute;   
+    right: 1%;
+    top: 5%;
+    max-width: 98%; 
+}
+
+.saldo, .receitas, .despesas {
+    display: inline-block;
+    background-color: white;
+    border-radius: 25px;
+    border: 1px solid gray;
+    width: 400px;
+    height: 120px;
+    text-align: left;
+    padding: 20px;
+    vertical-align: top; 
+    margin: 5px; 
+}
+
+.saldo p, .receitas p, .despesas p {
+    background-color: transparent;   
+    margin: 0;
+}
+
+.categorias {
+    position: relative;
+    left: 200px;
+    background-color: transparent;
+    margin-top: 30px;
+    width: calc(100% - 200px); 
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.sidenav {
+    padding: 10px 20px;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 120px;
+    background-color: white;
+    height:100%;
+    z-index: 1;
+}
+
+.sidenav input {
+    background-color: transparent;
+    position: relative;
+    top: 100px;
+    left: 7.5px;
+}
+
+.sidenav form {
+    background-color: transparent;
+}
+
+.imagem_dinheiro img {
+    position: fixed;
+    height: 80px;
+    width: 80px;
+    padding: 12px;
+    display: inline-block;
+    z-index: 2;
+    background-color: transparent;
+    top: 10px;
+    left: 9px;
+}
+
+.sidenav-receita {
+    padding: 10px 20px;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 120px;
+    background-color: white;
+    height:100%;
+    z-index: 1;
+}
+
+.sidenav-receita input {
+    background-color: transparent;
+    position: relative;
+    top: 20px;
+    left: 7.5px;
+    height: 40px;
+    width: 40px;
+}
+
+.lista-receitas {
+    align-items: center;
+    align-content: center;
+}
+
+table, th, td {
+    border: 1px solid gray;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-collapse: collapse;
+    font-size: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+label input {
+    border: 1px solid black;
+    border-radius: 8px;
+    border-collapse: collapse;
+    padding: 4px 10px;
+    display: inline-block;
+}
+
+.container-receita button{
+    border: 1px solid black;
+    border-radius: 8px;
+    border-collapse: collapse;
+    padding: 4px 10px;
+    display: inline-block;
+    background-color: #90e0ef; 
+}
+
+.container-receita input{
+    border: 1px solid black;
+    border-radius: 8px;
+    border-collapse: collapse;
+    padding: 4px 10px;
+    display: inline-block;
+    background-color: white; 
+}
+
+.container-despesa button {
+    border: 1px solid black;
+    border-radius: 8px;
+    border-collapse: collapse;
+    padding: 4px 10px;
+    display: inline-block;
+    background-color: #ed2939; 
+    color: white;
+}
+
+.container-despesa input {
+    border: 1px solid black;
+    border-radius: 8px;
+    border-collapse: collapse;
+    padding: 4px 10px;
+    display: inline-block;
+    background-color: white; 
+}
+
+
+.categorias div h3 {
+    font-size: 24px;
+}
+
+.saldo h3 { color: #228BE6; }
+.receitas h3 { color: #28a745; }
+.despesas h3 { color: #dc3545; }
+
+.grafico-container {
+    max-width: 650px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}

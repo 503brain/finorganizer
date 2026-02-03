@@ -5,26 +5,6 @@ function getParameterByName(name) {
     return params.get(name);
 }
 
-const mensagem = getParameterByName('mensagem');
-if (mensagem) {
-    const div = document.getElementById('mensagemLogin');
-    div.textContent = '✅ ' + decodeURIComponent(mensagem);
-    div.style.display = 'block';
-
-    setTimeout(() => {
-        div.style.display = 'none';
-        window.history.replaceState({}, document.title, window.location.pathname);
-    }, 3000);
-}
-
-function checkLoginStatus() {
-    const usuario = sessionStorage.getItem('usuario');
-    if (usuario) {
-        document.getElementById('userInfo').style.display = 'flex';
-        document.getElementById('userWelcome').textContent = '👋 Olá, ' + usuario + '!';
-    }
-}
-
 function formatCurrency(value) {
     return parseFloat(value)
         .toFixed(2)
@@ -38,24 +18,26 @@ function loadTotals() {
         .then(data => {
             let receitas = 0;
             let despesas = 0;
+            let saldo = 0;
 
             if (data.success) {
                 receitas = parseFloat(data.total_receitas);
                 despesas = parseFloat(data.total_despesas);
+                saldo = parseFloat(data.saldo);
 
                 document.getElementById('totalReceitas').textContent =
                     'R$ ' + formatCurrency(receitas);
                 document.getElementById('totalDespesas').textContent =
                     'R$ ' + formatCurrency(despesas);
                 document.getElementById('saldoTotal').textContent =
-                    'R$ ' + formatCurrency(data.saldo);
+                    'R$ ' + formatCurrency(saldo);
             }
 
-            renderGrafico(receitas, despesas);
+            renderGrafico(receitas, despesas, saldo);
         });
 }
 
-function renderGrafico(receitas, despesas) {
+function renderGrafico(receitas, despesas, saldo) {
     const ctx = document.getElementById('graficoReceitasDespesas');
 
     if (grafico) grafico.destroy();
@@ -63,10 +45,10 @@ function renderGrafico(receitas, despesas) {
     grafico = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['Receitas', 'Despesas'],
+            labels: ['Receitas', 'Despesas', 'Saldo Final'],
             datasets: [{
-                data: [receitas, despesas],
-                backgroundColor: ['#28a745', '#dc3545']
+                data: [receitas, despesas, saldo],
+                backgroundColor: ['#28a745', '#dc3545', '#6da2f9']
             }]
         },
         options: {
@@ -74,7 +56,7 @@ function renderGrafico(receitas, despesas) {
                 legend: { display: false },
                 title: {
                     display: true,
-                    text: 'Receitas x Despesas'
+                    text: 'Receitas x Despesas x Saldo'
                 }
             },
             scales: {
@@ -90,6 +72,5 @@ function renderGrafico(receitas, despesas) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    checkLoginStatus();
     loadTotals();
 });

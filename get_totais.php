@@ -18,13 +18,14 @@ try {
         $total_despesas = $row['total'] ? (float)$row['total'] : 0;
     }
     
-    $saldo = $total_receitas - $total_despesas;
+    $saldo_final = $total_receitas - $total_despesas;
     
     echo json_encode([
         'success' => true,
         'total_receitas' => $total_receitas,
         'total_despesas' => $total_despesas,
-        'saldo' => $saldo
+        'saldo' => $saldo_final,
+        'saldo_final' => $saldo_final  
     ]);
     
     mysqli_close($connection);

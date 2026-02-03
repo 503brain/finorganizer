@@ -18,11 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function enviarDespesa() {
-    // Pegar valores dos inputs
     const descricao = document.getElementById('descricao').value.trim();
     const valor = document.getElementById('valor').value.trim();
     
-    // Validar dados
     if (!descricao || !valor) {
         alert('Por favor, preencha todos os campos!');
         return;

@@ -33,4 +33,5 @@ These information are available also in PT-BR on the `escopo_bd.txt` file.
 
 ## Main screen photo
 
-![Main screen](./assets/1.png "Main screen")
+![Login page](./assets/login.png "Login page")
+![Main screen](./assets/main-screen.png "Main screen")
